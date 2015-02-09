@@ -23,17 +23,17 @@ NTP | ntpd | chrony
     exit
 ### SystemD
 Starting and stopping services
-    systemctl start httpd.service
-    systemctl stop httpd.service
+```systemctl start httpd.service
+systemctl stop httpd.service```
 Enabeling and disableing services
-    systemctl enable mariadb.service
-    systemctl disable mariadb.service
+```systemctl enable mariadb.service
+systemctl disable mariadb.service```
 Masking and unmasking services. After masking a service you cannot enable it. if you need to enable a masked services you need to unmask it first.
-    systemctl mask iptables
-    systemctl unmask iptables
+```systemctl mask iptables
+systemctl unmask iptables```
 Change target in userspace. A target is something like runlevel
-    systemctl isolate multiuser.target # this will give a console
-    systemctl isolate graphical.target # this will give a gui
+```systemctl isolate multiuser.target # this will give a console
+systemctl isolate graphical.target # this will give a gui```
 Change target persistant.
-    systemctl set-default multiuser.target
-    systemctl set-default graphical.target
+```systemctl set-default multiuser.target
+systemctl set-default graphical.target```
